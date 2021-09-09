@@ -1,0 +1,13 @@
+<mat-card class="event-card">
+  <mat-card-title>{{ event.name }}</mat-card-title>
+  <mat-card-content>
+    <p>{{ event.description }}</p>
+    <p>{{ event.price | currency }}</p>
+    <p>{{ event.location }}</p>
+    <p>{{ event.date | date }}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <a mat-button [href]="event.url" target="_blank">Details</a>
+  </mat-card-actions>
+</mat-card>

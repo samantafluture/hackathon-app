@@ -5,8 +5,8 @@ export interface Event {
   price: number;
   location: string;
   date: Date;
-  url: string;
-  __v: number;
+  url?: string;
+  __v?: number;
 }
 
-export interface Events extends Array<Event> {}
+export type Events = Array<Event>;

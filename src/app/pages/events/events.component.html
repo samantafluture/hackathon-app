@@ -1,0 +1,14 @@
+<section>
+  <app-event-search [formControl]="eventsInput"></app-event-search>
+  <div>
+    <div *ngIf="events; else empty" class="event-list">
+      <div *ngFor="let event of events">
+        <app-event-card [event]="event"></app-event-card>
+      </div>
+    </div>
+
+    <ng-template #empty>
+      <p>No events...</p>
+    </ng-template>
+  </div>
+</section>
