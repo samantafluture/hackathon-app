@@ -38,7 +38,7 @@ body,
 }
 
 mat-label {
-  color: var(--secondary-color) !important;
+  color: var(--almost-white) !important;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -48,5 +48,5 @@ mat-form-field {
 }
 
 mat-icon {
-  color: var(--secondary-color) !important;
+  color: var(--almost-white) !important;
 }

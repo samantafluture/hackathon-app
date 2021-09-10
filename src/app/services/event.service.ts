@@ -24,6 +24,22 @@ export class EventService {
       );
   }
 
+  getEventById(id: string) {
+    return this.httpClient.get<Event>(`${API}/event/find/${id}`);
+  }
+
+  createEvent(event: Event) {
+    return this.httpClient.post<Event>(`${API}/event/create`, event);
+  }
+
+  updateEvent(event: Event, id: string) {
+    return this.httpClient.put<Event>(`${API}/event/update/${id}`, event);
+  }
+
+  removeEvent(id: string) {
+    return this.httpClient.delete<Event>(`${API}/event/delete/${id}`);
+  }
+
   private sortByPrice(eventA: Event, eventB: Event) {
     if (eventA.price > eventB.price) {
       return 1;
