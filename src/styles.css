@@ -38,11 +38,15 @@ body,
 }
 
 mat-label {
-  color: var(--almost-white) !important;
+  color: var(--secondary-color) !important;
   font-weight: 500;
   font-size: 1rem;
 }
 
 mat-form-field {
   display: block !important;
+}
+
+mat-icon {
+  color: var(--secondary-color) !important;
 }
