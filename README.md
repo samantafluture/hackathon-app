@@ -28,17 +28,17 @@ Deploy: Vercel.
 
 ## Screens
 
-![screenshot-1]()
-![screenshot-2]()
-![screenshot-3]()
+![screenshot-1](https://github.com/samantafluture/hackathon-app/blob/main/src/assets/screenshot-1.png?raw=true)
+![screenshot-2](https://github.com/samantafluture/hackathon-app/blob/main/src/assets/screenshot-2.png?raw=true)
+![screenshot-3](https://github.com/samantafluture/hackathon-app/blob/main/src/assets/screenshot-3.png?raw=true)
 
 ## Under Construction
 
 Features that are being implemented: 
 
-- [] Filter search by: location, price, remote (true/false), alphabetican order
-- [] Open card with details
-- [] Create, edit and delete hackathons if you're logged in
-- [] Google login with Firebase
+- [ ] Filter search by: location, price, remote (true/false), alphabetican order
+- [ ] Open card with details
+- [ ] Create, edit and delete hackathons if you're logged in
+- [ ] Google login with Firebase
 
 Please feel free to contribute! This web app is still under development :coffee:
