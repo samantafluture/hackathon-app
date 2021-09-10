@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { merge } from 'rxjs';
-import { debounceTime, filter, switchMap, tap } from 'rxjs/operators';
+import {
+  debounceTime,
+  distinctUntilChanged,
+  filter,
+  switchMap,
+  tap,
+} from 'rxjs/operators';
 import { EventService } from 'src/app/services/event.service';
 
 const TYPING_DEBOUNCE_TIME = 300;
@@ -23,6 +29,7 @@ export class EventsComponent {
     }),
     tap(console.log),
     filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
+    distinctUntilChanged(),
     switchMap((typedValue) => this.eventService.getAllEvents(typedValue)),
     tap(console.log)
   );
