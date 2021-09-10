@@ -1,5 +1,5 @@
 import { Event } from './../interfaces/event';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Events } from '../interfaces/event';
@@ -13,9 +13,10 @@ const API = environment.apiUrl;
 export class EventService {
   constructor(private httpClient: HttpClient) {}
 
-  getAllEvents() {
+  getAllEvents(value?: string) {
+    const params = value ? new HttpParams().append('name', value) : undefined;
     return this.httpClient
-      .get<Events>(`${API}/event/all`)
+      .get<Events>(`${API}/event/search`, { params })
       .pipe(
         map((events) =>
           events.sort((eventA, eventB) => this.sortByPrice(eventA, eventB))

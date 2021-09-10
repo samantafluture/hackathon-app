@@ -1,5 +1,6 @@
 <section>
-  <app-event-search [formControl]="eventsInput"></app-event-search>
+  <!-- <app-event-search [formControl]="eventsInput"></app-event-search> -->
+  <input [formControl]="eventsInput" />
   <div>
     <div class="event-list" *ngIf="events$ | async as events; else empty">
       <div *ngFor="let event of events">
