@@ -19,19 +19,12 @@ const TYPING_DEBOUNCE_TIME = 300;
 })
 export class EventsComponent {
   eventsInput = new FormControl();
-  allEvents$ = this.eventService
-    .getAllEvents()
-    .pipe(tap(() => console.log('Initial data flux')));
+  allEvents$ = this.eventService.getAllEvents();
   filteredByInput$ = this.eventsInput.valueChanges.pipe(
     debounceTime(TYPING_DEBOUNCE_TIME),
-    tap(() => {
-      console.log('Filtered data flux');
-    }),
-    tap(console.log),
     filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
     distinctUntilChanged(),
-    switchMap((typedValue) => this.eventService.getAllEvents(typedValue)),
-    tap(console.log)
+    switchMap((typedValue) => this.eventService.getAllEvents(typedValue))
   );
 
   events$ = merge(this.allEvents$, this.filteredByInput$);
