@@ -1,10 +1,10 @@
 # Hackathon App (Front-End)
 
-A basic and simple web app to search for hackathons around the world and remote ones.
+A basic and simple web app to search for hackathons around the world, built with Angular.
 
 It uses type ahead search and tries to make the minimum of requests to the server.
 
-Built with Angular and Angular CLI.
+Try it here: [Hackathon App](https://hackathonapp-front-angular.vercel.app/)
 
 This front-end uses the following backend: [Hackathon API](https://hackathon-api-nest-mongo.herokuapp.com/event/all). 
 
