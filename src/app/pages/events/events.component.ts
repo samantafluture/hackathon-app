@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { merge } from 'rxjs';
-import { switchMap, tap } from 'rxjs/operators';
+import { filter, switchMap, tap } from 'rxjs/operators';
 import { EventService } from 'src/app/services/event.service';
 
 @Component({
@@ -18,6 +18,8 @@ export class EventsComponent {
     tap(() => {
       console.log('Filtered data flux');
     }),
+    tap(console.log),
+    filter((typedValue) => typedValue.length >= 3 || !typedValue.length),
     switchMap((typedValue) => this.eventService.getAllEvents(typedValue))
   );
 
