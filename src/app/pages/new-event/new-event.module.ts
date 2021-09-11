@@ -3,11 +3,10 @@ import { CommonModule } from '@angular/common';
 import { NewEventComponent } from './new-event.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule } from '@angular/forms';
-import { DatepickerComponent } from './datepicker/datepicker.component';
-import { CreateBtnsComponent } from './create-btns/create-btns.component';
+import { FormCardComponent } from './form-card/form-card.component';
 
 @NgModule({
-  declarations: [NewEventComponent, DatepickerComponent, CreateBtnsComponent],
+  declarations: [NewEventComponent, FormCardComponent],
   imports: [CommonModule, SharedModule, FormsModule],
 })
 export class NewEventModule {}

@@ -12,7 +12,6 @@ export class EventBtnNewComponent implements OnInit {
   ngOnInit(): void {}
 
   createEvent() {
-    console.log("got to 'create new event form'");
     this.router.navigate(['/create']);
   }
 }

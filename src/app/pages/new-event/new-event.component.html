@@ -1,40 +1,57 @@
-<section class="form__wrapper">
-  <mat-card class="form__card">
-    <h3>Create a Hackathon</h3>
-    <form action="">
-      <mat-form-field appearance="fill">
-        <mat-label>Title</mat-label>
-        <input matInput />
+<app-form-card>
+  <form method="post">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="event.name" name="name" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="event.description"
+        name="description"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>URL</mat-label>
+      <input matInput [(ngModel)]="event.url" name="url" />
+    </mat-form-field>
+    <div class="form-flex">
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Price</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="0"
+          [(ngModel)]="event.price"
+          name="price"
+        />
+        <span matPrefix>$&nbsp;</span>
       </mat-form-field>
       <mat-form-field appearance="fill">
-        <mat-label>Description</mat-label>
-        <textarea matInput></textarea>
+        <mat-label>Date</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="event.date"
+          name="date"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
+    </div>
+    <div class="form-flex">
       <mat-form-field appearance="fill">
-        <mat-label>URL</mat-label>
-        <input matInput />
+        <mat-label>Location</mat-label>
+        <input matInput [(ngModel)]="event.location" name="location" />
       </mat-form-field>
-      <div class="form-flex">
-        <mat-form-field appearance="fill" floatLabel="always">
-          <mat-label>Price</mat-label>
-          <input
-            matInput
-            type="number"
-            class="example-right-align"
-            placeholder="0"
-          />
-          <span matPrefix>$&nbsp;</span>
-        </mat-form-field>
-        <app-datepicker></app-datepicker>
-      </div>
-      <div class="form-flex">
-        <mat-form-field appearance="fill">
-          <mat-label>Location</mat-label>
-          <input matInput />
-        </mat-form-field>
-        <mat-slide-toggle>Remote Available</mat-slide-toggle>
-      </div>
-      <app-create-btns></app-create-btns>
-    </form>
-  </mat-card>
-</section>
+      <mat-slide-toggle>Remote Available</mat-slide-toggle>
+    </div>
+    <div class="form-btns">
+      <button mat-raised-button color="basic" (click)="cancel()">Cancel</button>
+      <button mat-raised-button color="primary" (click)="addEvent(event)">
+        Add Hackathon
+      </button>
+    </div>
+  </form>
+</app-form-card>

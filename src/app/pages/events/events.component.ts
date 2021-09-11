@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { merge } from 'rxjs';
 import {
@@ -17,7 +17,7 @@ const TYPING_DEBOUNCE_TIME = 300;
   templateUrl: './events.component.html',
   styleUrls: ['./events.component.css'],
 })
-export class EventsComponent {
+export class EventsComponent implements OnInit {
   eventsInput = new FormControl();
   allEvents$ = this.eventService.getAllEvents();
   filteredByInput$ = this.eventsInput.valueChanges.pipe(
@@ -30,4 +30,8 @@ export class EventsComponent {
   events$ = merge(this.allEvents$, this.filteredByInput$);
 
   constructor(private eventService: EventService) {}
+
+  ngOnInit(): void {
+    this.eventService.getAllEvents();
+  }
 }

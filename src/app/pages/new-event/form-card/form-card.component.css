@@ -1,0 +1,17 @@
+h3 {
+  color: var(--almost-black);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+
+.form__wrapper {
+  padding: 1rem;
+}
+
+.form__card {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 600px;
+}
