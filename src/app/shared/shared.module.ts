@@ -1,3 +1,4 @@
+import { FormCardComponent } from './form-card/form-card.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
@@ -25,8 +26,8 @@ const materialModules = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [FormCardComponent],
   imports: [CommonModule, ...materialModules],
-  exports: [...materialModules],
+  exports: [...materialModules, FormCardComponent],
 })
 export class SharedModule {}

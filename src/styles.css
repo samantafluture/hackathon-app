@@ -46,7 +46,3 @@ mat-label {
 mat-form-field {
   display: block !important;
 }
-
-mat-icon {
-  color: var(--almost-white) !important;
-}

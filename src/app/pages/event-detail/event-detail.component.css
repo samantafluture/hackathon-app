@@ -1,0 +1,13 @@
+.form-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-btns {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+  
