@@ -1,0 +1,35 @@
+h3 {
+  color: var(--almost-black);
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+
+.form__wrapper {
+  padding: 1rem;
+}
+
+.form__card {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 600px;
+}
+
+.form-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-btn {
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+
+
+
+
+

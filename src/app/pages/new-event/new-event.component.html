@@ -1,0 +1,43 @@
+<section class="form__wrapper">
+  <mat-card class="form__card">
+    <h3>Create a Hackathon</h3>
+    <form action="">
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>URL</mat-label>
+        <input matInput />
+      </mat-form-field>
+      <div class="form-flex">
+        <mat-form-field appearance="fill" floatLabel="always">
+          <mat-label>Price</mat-label>
+          <input
+            matInput
+            type="number"
+            class="example-right-align"
+            placeholder="0"
+          />
+          <span matPrefix>$&nbsp;</span>
+        </mat-form-field>
+        <app-datepicker></app-datepicker>
+      </div>
+      <div class="form-flex">
+        <mat-form-field appearance="fill">
+          <mat-label>Location</mat-label>
+          <input matInput />
+        </mat-form-field>
+        <mat-slide-toggle>Remote Available</mat-slide-toggle>
+      </div>
+      <div class=" form-flex form-btn">
+        <button mat-raised-button color="basic">Cancel</button>
+        <button mat-raised-button color="primary">Add Hackathon</button>
+      </div>
+    </form>
+  </mat-card>
+</section>

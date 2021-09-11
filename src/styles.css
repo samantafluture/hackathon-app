@@ -1,5 +1,5 @@
 :root {
-  --primary-font: Arial, Helvetica, sans-serif;
+  --primary-font: Roboto, "Helvetica Neue", sans-serif;
   --primary-color: #7159c1;
   --secondary-color: #4e3d86;
   --light-grey: #ddd;
@@ -38,8 +38,8 @@ body,
 }
 
 mat-label {
-  color: var(--almost-white) !important;
-  font-weight: 500;
+  /* color: var(--almost-white) !important; */
+  /* font-weight: 500; */
   font-size: 1rem;
 }
 
